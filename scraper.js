@@ -179,7 +179,7 @@ async function clearCache() {
   if (keys.length === 0) {
     /* NOTICE !!!! miðað við notkunarlýsingar ef það eru eingin lyklar þá þarf ekki
        að hreinsa minnið þannig það er óssat ? */
-    return false;
+    return true;// eða false ?
   }
   // ef það eru til gögn þá eyðum þau
   await asyncDel.apply(client, keys);
